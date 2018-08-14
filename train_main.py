@@ -2,7 +2,7 @@
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from tf_helper 
+from tf_helper_function import *
 
 
 
