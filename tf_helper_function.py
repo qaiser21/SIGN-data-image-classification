@@ -58,6 +58,12 @@ def compute_cost(z3,y):
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=z3,labels=y))
     return cost
 
+def convert_to_one_hot(Y, C):
+    Y = np.eye(C)[Y.reshape(-1)].T
+    return Y
+
+
+
 def random_mini_batches(X, Y, mini_batch_size = 64, seed = 0):
     """
     Creates a list of random minibatches from (X, Y)
@@ -94,3 +100,4 @@ def random_mini_batches(X, Y, mini_batch_size = 64, seed = 0):
     
     
     return mini_batches
+
